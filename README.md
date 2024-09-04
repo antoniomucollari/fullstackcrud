@@ -58,4 +58,8 @@ A full stack CRUD application using Angular for the frontend and Spring Boot for
 ### On delete
 ![On delete](./screenshots/7.jpg)
 ### Server down
+<<<<<<< HEAD
 ![Server down](./screenshots/8.jpg)
+=======
+![Server down](./screenshots/8.jpg)
+>>>>>>> d58fb3465189b7b71089e1af001ef11c2bd0b862
