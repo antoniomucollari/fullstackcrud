@@ -41,6 +41,17 @@ A full stack CRUD application using Angular for the frontend and Spring Boot for
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/antoniomucollari/fullstackcrud/
+2. **Install dependencies**:
+    ```bash
+    //angular
+    ng serve
+    //spring boot
+    mvn spring-boot:run 
+## 3.Properties changes:
+    -Into properties of spring boot change username, url, password according to your postgress or if your not using Postgresql change postgresql to you database for example MySql
+### 4.Run both (angular and spring boot):
+### 5.Images configuration:
+    Into downloads add a folder uploads and there you can download images to use for contacts
 ## Screenshots
 ![Main Page](./screenshots/1.jpg)
 ### Add Item Form
