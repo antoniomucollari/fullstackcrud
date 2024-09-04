@@ -44,12 +44,16 @@ A full stack CRUD application using Angular for the frontend and Spring Boot for
 2. **Install dependencies**:
     ```bash
     //angular
-    ng serve
+    npm install
     //spring boot
     mvn spring-boot:run 
 ## 3.Properties changes:
     -Into properties of spring boot change username, url, password according to your postgress or if your not using Postgresql change postgresql to you database for example MySql
 ### 4.Run both (angular and spring boot):
+    //angular
+    ng serve
+    //spring boot
+    go to application and run in top of the ide 
 ### 5.Images configuration:
     Into downloads add a folder uploads and there you can download images to use for contacts
 ## Screenshots
