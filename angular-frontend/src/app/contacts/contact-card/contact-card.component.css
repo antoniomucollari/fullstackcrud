@@ -1,0 +1,82 @@
+.card {
+  border-radius: 8px;
+  padding: 16px;
+  cursor: pointer;
+  background: #fffcf7;
+  border: 1px solid #ddd;
+
+}
+
+p{
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+p i{
+  padding: 0 4px 0 0;
+  align-content: center;
+  font-size: 12px;
+  color: #9f6438;
+}
+.card h3{
+  font-size: 17px;
+  font-weight: bold;
+
+}
+
+.header h3, .title, img{
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+}
+
+.presentation{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+}
+.title {
+  font-size: 12px;
+  background: #f2e3ba;
+  border-radius: 20px;
+  margin-bottom: 5px;
+  color: #9f6438;
+  font-weight: bold;
+  text-align: center;
+}
+.card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.active {
+  color: #a23a47;
+  font-family: montserrat, sans-serif;
+
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+
+.buttons button {
+  margin-top: 8px;
+  padding: 6px 10px;
+  color: #fdfaf5;
+}
+
+.material-icons {
+  font-size: 18px;
+}
+
+@media (max-width: 450px) {
+  .buttons button {padding: 8px}
+  .buttons button i{font-size: 13px}
+}

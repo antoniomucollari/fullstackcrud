@@ -1,0 +1,34 @@
+
+  @if(isFetching()&& !error()){
+    <app-loading-container/>
+  }
+  @if (error()){
+    <p class="fallback-text">{{error()}}</p>
+  }
+  <div class="contact-list">
+  @if(contacts() && !error() && !isFetching()){
+    @for (contact of contacts(); track contact.id){
+      <app-contact-card (contactDeleted)="getContacts()" [contact]="contact"/>
+    } @empty {
+      <p class="noContacts">There are no contacts available!</p>
+    }
+
+  }
+</div>
+  @if(contacts() && !error() && totalPages > 1 && !isFetching()){
+<div class="pagination-container">
+  <button class="left" (click)="previousPage()" [disabled]="currentPage === 0"><i class="material-icons">arrow_back_ios</i></button>
+  <button class="span">
+    {{ currentPage + 1 }}
+  </button>
+  <button class="right" (click)="nextPage()" [disabled]="currentPage === totalPages"><i class="material-icons">arrow_forward_ios</i></button>
+  <div class="custom-select-container">
+    <select (change)="onChangePageSize()" name="status" id="status" [(ngModel)]="enteredPageSize" class="custom-select">
+      <option value=3>3</option>
+      <option value=5>5</option>
+      <option value=7>7</option>
+      <option value=10>10</option>
+    </select>
+  </div>
+</div>
+}

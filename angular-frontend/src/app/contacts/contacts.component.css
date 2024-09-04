@@ -1,0 +1,134 @@
+.contact-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+@media (max-width: 1200px) {
+  .contact-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 954px) {
+  .contact-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 750px) {
+  .contact-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.pagination-container{
+  display: block;
+  margin: 20px;
+  text-align: center;
+
+}
+.pagination-container i{
+  font-size: 12px;
+  font-weight: bold;
+  color: #a23a47;
+}
+
+.left ,.right{
+  background-color: transparent;
+  border: 2px solid #a23a47;
+  padding: 7px;
+
+  color: #a23a47;
+}
+.span{
+  border-radius: 0;
+  color: #a23a47;
+  border-left: 0;
+  right: 0;
+  border-top: 2px solid #a23a47;
+  border-bottom: 2px solid #a23a47;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+.span:focus{
+  outline: none; /* Remove default focus outline */
+  box-shadow: none
+
+
+}
+
+.left{
+  border-radius: 6px 0 0 6px;
+}
+.right{
+  border-radius: 0 6px 6px 0;
+}
+
+.custom-select:focus {
+  border-color: #a23a47;     /* Blue border on focus */
+  box-shadow: 0 0 5px rgba(146, 0, 30, 0.5); /* Add shadow on focus */
+  outline: none;             /* Remove default outline */
+}
+
+.custom-select option {
+  padding: 8px;              /* Padding for each option */
+  background-color: #fff;    /* White background for options */
+  color: #333;               /* Text color for options */
+}
+
+/* Add a custom arrow */
+.custom-select::after {
+  content: '▼';              /* Unicode arrow down */
+  position: absolute;
+  right: 10px;
+  top: calc(50% - 7px);
+  pointer-events: none;      /* Make the arrow non-clickable */
+}
+
+/* Ensure position and padding are respected */
+.custom-select-container {
+  position: relative;
+  display: inline-block;
+}
+.custom-select {
+  width: 50px;              /* Set a fixed width */
+  padding: 8px 12px;         /* Padding inside the select box */
+  font-size: 16px;           /* Font size for the options */   /* Text color */
+  background-color: #a23a47; /* Light background color */
+  border: none;    /* Light gray border */
+  border-radius: 4px;        /* Rounded corners */
+  appearance: none;          /* Remove default arrow in some browsers */
+  cursor: pointer;
+  color: #fff/* Change cursor to pointer */
+}
+
+.custom-select:focus {
+  border-color: #a23a47;     /* Blue border on focus */
+  box-shadow: 0 0 5px rgba(128, 0, 0, 0.5); /* Add shadow on focus */
+  outline: none;             /* Remove default outline */
+}
+
+.custom-select option {
+  padding: 8px;
+  border: none;/* Padding for each option */
+  background-color: #a23a47;    /* White background for options */
+  color: #fff;               /* Text color for options */
+}
+
+.custom-select-container {
+  position: relative;
+  display: inline-block;
+}
+.noContacts{
+  background-color: #a23a47;
+  padding: 7px;
+  color: #fff;
+  border-radius: 9px;
+}

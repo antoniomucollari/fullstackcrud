@@ -1,0 +1,69 @@
+<div class="contact-list">
+  @if(isFetching()&& !error()){
+    <app-loading-container/>
+  }
+  @if (error()){
+    <p class="fallback-text">{{error()}}</p>
+    <a href="#" class="back-link">&larr; Back to list</a>
+  }
+  @if(enteredStatus && !error() && !isFetching()){
+    <div class="edit-contact-container">
+
+
+    <form (ngSubmit)="onSubmit()">
+      <div class="edit-contact-form">
+        <div class="photo-section">
+<!--          <label for="image">Current Image:</label>-->
+          <img src="{{initialImg()}}" alt="Contact Photo" class="contact-photo">
+          <p class="info">Choose another image:</p>
+          <input type="file" id="image" name="image" (change)="onNameChange()" [(ngModel)]="enteredPhotoUrl"/>
+        </div>
+
+        <div class="details-section">
+          <div class="form-group"><a href="#" class="back-link">&larr; Back to list</a>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" [(ngModel)]="enteredName">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" [(ngModel)]="enteredEmail">
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="text" [(ngModel)]="enteredPhone">
+          </div>
+
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input id="address" name="address" type="text" [(ngModel)]="enteredAddress">
+          </div>
+
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input id="title" name="title" type="text" [(ngModel)]="enteredTitle">
+          </div>
+
+          <div class="form-group">
+            <label for="status">Status</label>
+            <select name="status" id="status" [(ngModel)]="enteredStatus" class="custom-select">
+              <option value="" disabled selected>Choose below</option>
+              <option value="Active">Active</option>
+              <option value="Inactive">Inactive</option>
+            </select>
+          </div>
+          <button appButton type="submit" class="save-btn">Save</button>
+          @if(!completed()){
+            <p id="warning">
+              Complete all fields!
+            </p>
+          }
+        </div>
+      </div>
+          </form>
+    </div>
+
+  }
+
+</div>

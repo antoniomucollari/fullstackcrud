@@ -1,0 +1,139 @@
+.edit-contact-container {
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #a23a47;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.edit-contact-form {
+  display: flex;
+  background-color: #fffcf7;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.photo-section {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.contact-photo {
+  width: 100%;
+  max-width: 150px;
+  border-radius: 8px;
+}
+
+.change-photo-btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #a23a47;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.details-section {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.form-group {
+  width: 48%;
+  margin-bottom: 10px;
+}
+
+.info{
+  font-size: 10px;
+  padding: 0;
+  margin: 10px 0 0 0;
+
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #a23a47;
+}
+
+.form-group input {
+  width: 93%;
+  padding: 8px;
+  border: 1px solid #a23a47;
+  border-radius: 4px;
+}
+
+.form-group {
+  width: 48%;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.custom-select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #333;
+  font-size: 16px;
+  appearance: none; /* Remove default dropdown arrow */
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  cursor: pointer;
+}
+
+.custom-select:focus {
+  border-color: #a23a47;
+  outline: none;
+}
+
+.custom-select option {
+  color: #333;
+  background-color: #fff;
+}
+#warning{
+  color: #a23a47;
+}
+@media (max-width: 768px) {
+  .edit-contact-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photo-section {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .contact-photo {
+    max-width: 100px;
+  }
+  .form-group{
+    width: 100%;
+  }
+  .details-section{
+    width: 100%;
+  }
+}

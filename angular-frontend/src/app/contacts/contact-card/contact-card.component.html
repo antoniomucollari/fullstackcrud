@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="header">
+    <div class="presentation">
+      <img [src]="contact().photoUrl" alt="{{ contact().name }}">
+      <h3>{{ contact().name }}</h3>
+    </div>
+    <p class="title">{{ contact().title }}</p>
+  </div>
+  <p><i class="material-icons">email</i>{{ contact().email }}</p>
+  <p><i class="material-icons">location_on</i>{{ contact().address }}</p>
+  <p><i class="material-icons">call</i>{{ contact().phone }}</p>
+  <p [class.active]="contact().status === 'Active'"><i class="material-icons">history_toggle_off</i>{{ contact().status }}</p>
+  <div class="buttons">
+    <button appButton [routerLink]="['/edit-contact', contact().id]"><i class="material-icons">edit</i></button>
+    <button appButton (click)="deleteContact(contact().id)"><i class="material-icons" >delete</i>
+    </button>
+  </div>
+</div>
